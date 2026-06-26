@@ -26,10 +26,6 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="loader" data-loader>
-      <span></span>
-      <p>Brewing CoffeeLux</p>
-    </div>
     <div class="scroll-progress" data-scroll-progress></div>
     <header class="hero" id="hero" aria-label="CoffeeLux hero">
       <img class="hero__bg" data-hero-image alt="CoffeeLux coffee atmosphere" />
@@ -46,7 +42,6 @@
         </div>
       </nav>
       <div class="hero__content">
-        <img class="hero__logo" data-logo alt="CoffeeLux emblem" />
         <p class="eyebrow">Premium Coffee House</p>
         <h1 data-cafe-name>CoffeeLux</h1>
         <p class="hero__tagline" data-tagline></p>
@@ -68,17 +63,18 @@
       <section
         class="section gallery"
         id="gallery"
-        aria-labelledby="gallery-title"
+        aria-label="CoffeeLux gallery"
       >
-        <div class="section__head">
-          <p class="eyebrow">Our Atmosphere</p>
-          <h2 id="gallery-title">Gallery</h2>
+        <div class="gallery__ambient" data-gallery-ambient></div>
+        <div class="gallery__grid" data-gallery-grid></div>
+        <div class="gallery__story">
+          <p class="eyebrow">Golden Hour Coffee</p>
           <p>
-            Warm corners, slow rituals, and little details that make every visit
-            feel personal.
+            Settle into <mark>warm wood</mark>, soft conversations, and the
+            scent of <mark>fresh espresso</mark>. Every corner of CoffeeLux is
+            designed to feel calm, familiar, and quietly memorable.
           </p>
         </div>
-        <div class="gallery__grid" data-gallery-grid></div>
       </section>
       <section class="section menu" id="menu" aria-labelledby="menu-title">
         <div class="section__head">

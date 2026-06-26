@@ -1,6 +1,8 @@
 import { $, money } from "./utils.js";
-import { addToCart } from "./cart.js";
+import { addToCart, changeCartQuantity, getQuantity } from "./cart.js";
+let menuData;
 export function renderMenu(data) {
+  menuData = data;
   const nav = $("[data-category-nav]"),
     root = $("[data-menu-content]");
   nav.innerHTML = "";
@@ -14,13 +16,47 @@ export function renderMenu(data) {
     );
   });
   root.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-add-cart]");
-    if (btn) addToCart(btn.dataset.addCart);
+    const quantityButton = e.target.closest("[data-qty-action]");
+    const addButton = e.target.closest("[data-add-cart]");
+    if (quantityButton || addButton) e.stopPropagation();
+    if (addButton) addToCart(addButton.dataset.addCart);
+    if (quantityButton) {
+      changeCartQuantity(
+        quantityButton.dataset.id,
+        quantityButton.dataset.qtyAction === "inc" ? 1 : -1,
+      );
+    }
+    const card = e.target.closest(".menu-card");
+    if (card && !quantityButton && !addButton) toggleCard(card);
   });
+  root.addEventListener("keydown", (e) => {
+    if (!["Enter", " "].includes(e.key)) return;
+    const card = e.target.closest(".menu-card");
+    if (!card) return;
+    e.preventDefault();
+    toggleCard(card);
+  });
+  document.addEventListener("cart:updated", syncMenuQuantities);
   observeCategories();
+  syncMenuQuantities();
 }
 function card(item) {
-  return `<article class="menu-card"><img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async"><div class="menu-card__body"><h4>${item.title}</h4><p>${item.description}</p><div class="menu-card__meta"><span class="price">${money(item.price)}</span><button class="btn btn--primary ripple" data-add-cart="${item.id}">Add to Cart</button></div></div></article>`;
+  return `<article class="menu-card" tabindex="0" aria-expanded="false" data-menu-card="${item.id}"><div class="menu-card__body"><h4>${item.title}</h4><div class="menu-card__meta"><span class="price">${money(item.price)}</span><span data-cart-control="${item.id}"></span></div><div class="menu-card__details"><p>${item.description}</p><span class="ingredients">${item.ingredients}</span></div></div><img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async"></article>`;
+}
+function toggleCard(card) {
+  const active = card.classList.toggle("is-active");
+  card.setAttribute("aria-expanded", String(active));
+}
+function syncMenuQuantities() {
+  if (!menuData) return;
+  menuData.items.forEach((item) => {
+    const control = document.querySelector(`[data-cart-control="${item.id}"]`);
+    if (!control) return;
+    const qty = getQuantity(item.id);
+    control.innerHTML = qty
+      ? `<span class="qty-control"><button data-qty-action="dec" data-id="${item.id}" aria-label="Remove one ${item.title}">−</button><span>${qty}</span><button data-qty-action="inc" data-id="${item.id}" aria-label="Add one ${item.title}">+</button></span>`
+      : `<button class="btn btn--primary ripple" data-add-cart="${item.id}">Add</button>`;
+  });
 }
 function observeCategories() {
   const links = [...document.querySelectorAll("[data-category-nav] a")];
@@ -30,7 +66,13 @@ function observeCategories() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           links.forEach((a) => a.classList.remove("is-active"));
-          map.get(entry.target.id)?.classList.add("is-active");
+          const active = map.get(entry.target.id);
+          active?.classList.add("is-active");
+          active?.scrollIntoView({
+            inline: "center",
+            block: "nearest",
+            behavior: "smooth",
+          });
         }
       });
     },

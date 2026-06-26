@@ -1,29 +1,18 @@
 import { $, $$ } from "./utils.js";
 export function initAnimations() {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (window.gsap && !reduce) {
-    gsap.from(
-      ".hero__logo,.eyebrow,h1,.hero__tagline,.hero__actions,.contact-icons",
-      { opacity: 0, y: 24, duration: 0.9, stagger: 0.08, ease: "power3.out" },
-    );
-    gsap.from(".section__head", {
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      scrollTrigger: false,
-    });
-  }
+  runHeroIntro(reduce);
   const io = new IntersectionObserver(
     (entries) =>
       entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.animate(
             [
-              { opacity: 0, transform: "translateY(24px)" },
+              { opacity: 0, transform: "translateY(18px)" },
               { opacity: 1, transform: "none" },
             ],
             {
-              duration: 650,
+              duration: 700,
               easing: "cubic-bezier(.22,1,.36,1)",
               fill: "both",
             },
@@ -42,6 +31,48 @@ export function initAnimations() {
     requestAnimationFrame(follow);
   }
   follow();
+}
+function runHeroIntro(reduce) {
+  const bg = $(".hero__bg"),
+    overlay = $(".hero__overlay"),
+    title = $(".hero h1"),
+    tagline = $(".hero__tagline"),
+    buttons = $$(".hero__actions .btn"),
+    icons = $$(".contact-icons a"),
+    scroll = $(".scroll-indicator"),
+    eyebrow = $(".hero .eyebrow");
+  if (reduce || !window.gsap) {
+    [overlay, eyebrow, title, tagline, scroll, ...buttons, ...icons].forEach(
+      (el) => {
+        if (el) el.style.opacity = 1;
+      },
+    );
+    return;
+  }
+  gsap.set(bg, { scale: 1 });
+  gsap.set(overlay, { opacity: 0 });
+  gsap.set([eyebrow, title, tagline, scroll, ...buttons, ...icons], {
+    opacity: 0,
+  });
+  const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+  tl.to(bg, { scale: 1.075, duration: 0.6 }, 0.3)
+    .to(overlay, { opacity: 1, duration: 0.6 }, 0.3)
+    .fromTo(eyebrow, { y: 8 }, { y: 0, opacity: 1, duration: 0.5 }, 0.9)
+    .fromTo(title, { y: 8 }, { y: 0, opacity: 1, duration: 0.5 }, 0.96)
+    .fromTo(tagline, { y: 8 }, { y: 0, opacity: 1, duration: 0.5 }, 1.02)
+    .fromTo(
+      buttons,
+      { y: 12 },
+      { y: 0, opacity: 1, duration: 0.5, stagger: 0.06 },
+      1.08,
+    )
+    .fromTo(
+      icons,
+      { x: 12 },
+      { x: 0, opacity: 1, duration: 0.45, stagger: 0.06 },
+      1.14,
+    )
+    .to(scroll, { opacity: 1, duration: 0.35 }, 1.18);
 }
 export function progress() {
   const bar = $("[data-scroll-progress]");

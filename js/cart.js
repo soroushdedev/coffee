@@ -4,6 +4,7 @@ let items = [],
   products = [];
 const save = () => storage.set("cart", items);
 const count = () => items.reduce((s, i) => s + i.qty, 0);
+const emit = () => document.dispatchEvent(new CustomEvent("cart:updated"));
 export function initCart(allProducts) {
   products = allProducts;
   items = storage.get("cart", []);
@@ -20,20 +21,24 @@ export function initCart(allProducts) {
     if (e.key === "Escape") closeCart();
   });
 }
-export function addToCart(id) {
-  const found = items.find((i) => i.id === id);
-  found ? found.qty++ : items.push({ id, qty: 1 });
-  save();
-  render();
-  toast("Added to your CoffeeLux cart");
+export function getQuantity(id) {
+  return items.find((i) => i.id === id)?.qty || 0;
 }
-function updateQty(id, delta) {
-  const item = items.find((i) => i.id === id);
-  if (!item) return;
-  item.qty += delta;
-  if (item.qty <= 0) items = items.filter((i) => i.id !== id);
+export function addToCart(id) {
+  updateQty(id, 1, true);
+}
+export function changeCartQuantity(id, delta) {
+  updateQty(id, delta, false);
+}
+function updateQty(id, delta, notify = false) {
+  const found = items.find((i) => i.id === id);
+  if (found) found.qty += delta;
+  else if (delta > 0) items.push({ id, qty: delta });
+  items = items.filter((i) => i.qty > 0);
   save();
   render();
+  emit();
+  if (notify && delta > 0) toast("Added to your CoffeeLux cart");
 }
 function render() {
   const badge = $("[data-cart-count]"),
