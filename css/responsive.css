@@ -39,8 +39,3 @@
     animation: none;
   }
 }
-
-/* CoffeeLux refreshed menu remains a compact horizontal list at every width. */
-.menu-grid {
-  grid-template-columns: 1fr;
-}
