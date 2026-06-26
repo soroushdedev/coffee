@@ -1,0 +1,40 @@
+{
+  "cafeName": "CoffeeLux",
+  "tagline": "Slow mornings, golden crema, and handcrafted comfort in every cup.",
+  "logo": "assets/images/logo/coffeelux-logo.svg",
+  "phone": "+1 (555) 248-3377",
+  "phoneUrl": "tel:+15552483377",
+  "instagram": "@coffeelux.cafe",
+  "instagramUrl": "https://www.instagram.com/",
+  "googleMapsUrl": "https://maps.google.com/?q=CoffeeLux%20Cafe",
+  "heroImage": "assets/images/hero/hero-coffee.svg",
+  "primaryColor": "#B88746",
+  "address": "28 Roastery Lane, Portland, OR 97205",
+  "workingHours": ["Mon–Fri: 7:00 AM – 8:00 PM", "Sat–Sun: 8:00 AM – 9:00 PM"],
+  "galleryImages": [
+    {
+      "src": "assets/images/gallery/gallery-1.svg",
+      "alt": "Warm latte served in a cozy CoffeeLux corner"
+    },
+    {
+      "src": "assets/images/gallery/gallery-2.svg",
+      "alt": "Freshly roasted coffee beans"
+    },
+    {
+      "src": "assets/images/gallery/gallery-3.svg",
+      "alt": "Manual pour over coffee preparation"
+    },
+    {
+      "src": "assets/images/gallery/gallery-4.svg",
+      "alt": "Desserts displayed on a coffee shop table"
+    },
+    {
+      "src": "assets/images/gallery/gallery-5.svg",
+      "alt": "Iced coffee with golden highlights"
+    },
+    {
+      "src": "assets/images/gallery/gallery-6.svg",
+      "alt": "Minimal premium coffee shop interior"
+    }
+  ]
+}

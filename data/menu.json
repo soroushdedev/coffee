@@ -1,0 +1,172 @@
+{
+  "categories": [
+    { "id": "hot-coffee", "name": "Hot Coffee" },
+    { "id": "cold-coffee", "name": "Cold Coffee" },
+    { "id": "breakfast", "name": "Breakfast" },
+    { "id": "desserts", "name": "Desserts" },
+    { "id": "cake", "name": "Cake" },
+    { "id": "mocktail", "name": "Mocktail" }
+  ],
+  "items": [
+    {
+      "id": "espresso",
+      "category": "hot-coffee",
+      "title": "Velvet Espresso",
+      "description": "A concentrated single-origin shot with caramel crema and deep cocoa notes.",
+      "price": 4.2,
+      "image": "assets/images/menu/espresso.svg"
+    },
+    {
+      "id": "americano",
+      "category": "hot-coffee",
+      "title": "Golden Americano",
+      "description": "Smooth espresso lengthened with hot filtered water for a clean, rounded finish.",
+      "price": 4.8,
+      "image": "assets/images/menu/americano.svg"
+    },
+    {
+      "id": "cappuccino",
+      "category": "hot-coffee",
+      "title": "Cloud Cappuccino",
+      "description": "Balanced espresso, steamed milk, and a plush foam cap dusted with cacao.",
+      "price": 5.6,
+      "image": "assets/images/menu/cappuccino.svg"
+    },
+    {
+      "id": "latte",
+      "category": "hot-coffee",
+      "title": "Honey Oat Latte",
+      "description": "Oat milk latte finished with wildflower honey and a whisper of cinnamon.",
+      "price": 6.1,
+      "image": "assets/images/menu/latte.svg"
+    },
+    {
+      "id": "mocha",
+      "category": "hot-coffee",
+      "title": "Midnight Mocha",
+      "description": "House chocolate ganache folded into espresso and silky steamed milk.",
+      "price": 6.4,
+      "image": "assets/images/menu/mocha.svg"
+    },
+    {
+      "id": "cold-brew",
+      "category": "cold-coffee",
+      "title": "Amber Cold Brew",
+      "description": "Eighteen-hour steeped coffee served over clear ice with brown sugar aromatics.",
+      "price": 5.9,
+      "image": "assets/images/menu/cold-brew.svg"
+    },
+    {
+      "id": "iced-latte",
+      "category": "cold-coffee",
+      "title": "Iced Vanilla Latte",
+      "description": "Chilled espresso, vanilla bean syrup, and milk poured over hand-cut ice.",
+      "price": 6.2,
+      "image": "assets/images/menu/iced-latte.svg"
+    },
+    {
+      "id": "frappe",
+      "category": "cold-coffee",
+      "title": "Caramel Cream Frappe",
+      "description": "Blended coffee, caramel, milk, and cream with a soft salted finish.",
+      "price": 6.8,
+      "image": "assets/images/menu/frappe.svg"
+    },
+    {
+      "id": "croissant",
+      "category": "breakfast",
+      "title": "Butter Croissant",
+      "description": "Flaky slow-fermented pastry baked until golden and served warm.",
+      "price": 4.9,
+      "image": "assets/images/menu/croissant.svg"
+    },
+    {
+      "id": "avocado-toast",
+      "category": "breakfast",
+      "title": "Avocado Sourdough",
+      "description": "Crushed avocado, lemon, chili flakes, and herbs on toasted sourdough.",
+      "price": 9.5,
+      "image": "assets/images/menu/avocado-toast.svg"
+    },
+    {
+      "id": "pancakes",
+      "category": "breakfast",
+      "title": "Maple Mini Pancakes",
+      "description": "Stacked buttermilk pancakes with maple butter and toasted pecans.",
+      "price": 8.9,
+      "image": "assets/images/menu/pancakes.svg"
+    },
+    {
+      "id": "bagel",
+      "category": "breakfast",
+      "title": "Sesame Cream Bagel",
+      "description": "Toasted sesame bagel with whipped cream cheese and micro greens.",
+      "price": 7.4,
+      "image": "assets/images/menu/bagel.svg"
+    },
+    {
+      "id": "tiramisu",
+      "category": "desserts",
+      "title": "Espresso Tiramisu",
+      "description": "Mascarpone cream layered with espresso-soaked sponge and dark cocoa.",
+      "price": 7.8,
+      "image": "assets/images/menu/tiramisu.svg"
+    },
+    {
+      "id": "brownie",
+      "category": "desserts",
+      "title": "Walnut Brownie",
+      "description": "Dense chocolate brownie with toasted walnuts and sea salt crystals.",
+      "price": 5.7,
+      "image": "assets/images/menu/brownie.svg"
+    },
+    {
+      "id": "cheesecake",
+      "category": "desserts",
+      "title": "Vanilla Cheesecake",
+      "description": "Creamy vanilla cheesecake with coffee caramel drizzle.",
+      "price": 7.2,
+      "image": "assets/images/menu/cheesecake.svg"
+    },
+    {
+      "id": "macaron",
+      "category": "desserts",
+      "title": "Coffee Macarons",
+      "description": "Almond shells filled with espresso buttercream and hazelnut praline.",
+      "price": 5.4,
+      "image": "assets/images/menu/macaron.svg"
+    },
+    {
+      "id": "chocolate-cake",
+      "category": "cake",
+      "title": "Dark Chocolate Cake",
+      "description": "Layered chocolate sponge, mocha cream, and glossy ganache.",
+      "price": 8.2,
+      "image": "assets/images/menu/chocolate-cake.svg"
+    },
+    {
+      "id": "carrot-cake",
+      "category": "cake",
+      "title": "Spiced Carrot Cake",
+      "description": "Moist carrot cake with cream cheese frosting and toasted spices.",
+      "price": 7.9,
+      "image": "assets/images/menu/carrot-cake.svg"
+    },
+    {
+      "id": "berry-mocktail",
+      "category": "mocktail",
+      "title": "Berry Coffee Spritz",
+      "description": "Cold brew, berry reduction, citrus, and sparkling water over ice.",
+      "price": 7.1,
+      "image": "assets/images/menu/berry-mocktail.svg"
+    },
+    {
+      "id": "citrus-cooler",
+      "category": "mocktail",
+      "title": "Citrus Mint Cooler",
+      "description": "Orange, lemon, mint, and tonic with a delicate espresso mist.",
+      "price": 6.9,
+      "image": "assets/images/menu/citrus-cooler.svg"
+    }
+  ]
+}
