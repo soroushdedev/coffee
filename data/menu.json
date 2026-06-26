@@ -1,0 +1,210 @@
+{
+  "categories": [
+    {
+      "id": "hot-coffee",
+      "name": "Hot Coffee"
+    },
+    {
+      "id": "cold-coffee",
+      "name": "Cold Coffee"
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast"
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts"
+    },
+    {
+      "id": "cake",
+      "name": "Cake"
+    },
+    {
+      "id": "mocktail",
+      "name": "Mocktail"
+    }
+  ],
+  "items": [
+    {
+      "id": "espresso",
+      "category": "hot-coffee",
+      "title": "Velvet Espresso",
+      "description": "A concentrated single-origin shot with caramel crema and deep cocoa notes.",
+      "price": 4.2,
+      "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "americano",
+      "category": "hot-coffee",
+      "title": "Golden Americano",
+      "description": "Smooth espresso lengthened with hot filtered water for a clean, rounded finish.",
+      "price": 4.8,
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "cappuccino",
+      "category": "hot-coffee",
+      "title": "Cloud Cappuccino",
+      "description": "Balanced espresso, steamed milk, and a plush foam cap dusted with cacao.",
+      "price": 5.6,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "latte",
+      "category": "hot-coffee",
+      "title": "Honey Oat Latte",
+      "description": "Oat milk latte finished with wildflower honey and a whisper of cinnamon.",
+      "price": 6.1,
+      "image": "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "mocha",
+      "category": "hot-coffee",
+      "title": "Midnight Mocha",
+      "description": "House chocolate ganache folded into espresso and silky steamed milk.",
+      "price": 6.4,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "cold-brew",
+      "category": "cold-coffee",
+      "title": "Amber Cold Brew",
+      "description": "Eighteen-hour steeped coffee served over clear ice with brown sugar aromatics.",
+      "price": 5.9,
+      "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "iced-latte",
+      "category": "cold-coffee",
+      "title": "Iced Vanilla Latte",
+      "description": "Chilled espresso, vanilla bean syrup, and milk poured over hand-cut ice.",
+      "price": 6.2,
+      "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "frappe",
+      "category": "cold-coffee",
+      "title": "Caramel Cream Frappe",
+      "description": "Blended coffee, caramel, milk, and cream with a soft salted finish.",
+      "price": 6.8,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "House espresso, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "croissant",
+      "category": "breakfast",
+      "title": "Butter Croissant",
+      "description": "Flaky slow-fermented pastry baked until golden and served warm.",
+      "price": 4.9,
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "avocado-toast",
+      "category": "breakfast",
+      "title": "Avocado Sourdough",
+      "description": "Crushed avocado, lemon, chili flakes, and herbs on toasted sourdough.",
+      "price": 9.5,
+      "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "pancakes",
+      "category": "breakfast",
+      "title": "Maple Mini Pancakes",
+      "description": "Stacked buttermilk pancakes with maple butter and toasted pecans.",
+      "price": 8.9,
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "bagel",
+      "category": "breakfast",
+      "title": "Sesame Cream Bagel",
+      "description": "Toasted sesame bagel with whipped cream cheese and micro greens.",
+      "price": 7.4,
+      "image": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "tiramisu",
+      "category": "desserts",
+      "title": "Espresso Tiramisu",
+      "description": "Mascarpone cream layered with espresso-soaked sponge and dark cocoa.",
+      "price": 7.8,
+      "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "brownie",
+      "category": "desserts",
+      "title": "Walnut Brownie",
+      "description": "Dense chocolate brownie with toasted walnuts and sea salt crystals.",
+      "price": 5.7,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "cheesecake",
+      "category": "desserts",
+      "title": "Vanilla Cheesecake",
+      "description": "Creamy vanilla cheesecake with coffee caramel drizzle.",
+      "price": 7.2,
+      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "macaron",
+      "category": "desserts",
+      "title": "Coffee Macarons",
+      "description": "Almond shells filled with espresso buttercream and hazelnut praline.",
+      "price": 5.4,
+      "image": "https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "chocolate-cake",
+      "category": "cake",
+      "title": "Dark Chocolate Cake",
+      "description": "Layered chocolate sponge, mocha cream, and glossy ganache.",
+      "price": 8.2,
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "carrot-cake",
+      "category": "cake",
+      "title": "Spiced Carrot Cake",
+      "description": "Moist carrot cake with cream cheese frosting and toasted spices.",
+      "price": 7.9,
+      "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "berry-mocktail",
+      "category": "mocktail",
+      "title": "Berry Coffee Spritz",
+      "description": "Cold brew, berry reduction, citrus, and sparkling water over ice.",
+      "price": 7.1,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    },
+    {
+      "id": "citrus-cooler",
+      "category": "mocktail",
+      "title": "Citrus Mint Cooler",
+      "description": "Orange, lemon, mint, and tonic with a delicate espresso mist.",
+      "price": 6.9,
+      "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=640&q=78",
+      "ingredients": "Fresh bakery base, seasonal garnish, golden syrup, sea salt finish"
+    }
+  ]
+}

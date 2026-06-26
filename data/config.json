@@ -1,0 +1,39 @@
+{
+  "cafeName": "CoffeeLux",
+  "tagline": "Slow mornings, golden crema, and handcrafted comfort in every cup.",
+  "logo": "assets/images/logo/coffeelux-logo.svg",
+  "phone": "+1 (555) 248-3377",
+  "phoneUrl": "tel:+15552483377",
+  "instagram": "@coffeelux.cafe",
+  "instagramUrl": "https://www.instagram.com/",
+  "googleMapsUrl": "https://maps.google.com/?q=CoffeeLux%20Cafe",
+  "heroImage": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2200&q=80",
+  "primaryColor": "#D89A43",
+  "address": "28 Roastery Lane, Portland, OR 97205",
+  "workingHours": [
+    "Mon\u2013Fri: 7:00 AM \u2013 8:00 PM",
+    "Sat\u2013Sun: 8:00 AM \u2013 9:00 PM"
+  ],
+  "galleryImages": [
+    {
+      "src": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Warm specialty coffee shop interior during golden hour",
+      "dominantColor": "#b8753a"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Fresh espresso being poured with crema",
+      "dominantColor": "#d89a43"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Cozy coffee cup on rustic wooden table",
+      "dominantColor": "#8b5130"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Barista preparing coffee in a modern warm cafe",
+      "dominantColor": "#f0c57a"
+    }
+  ]
+}

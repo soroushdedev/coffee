@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="CoffeeLux is a cozy premium coffee shop serving handcrafted coffee, breakfast, desserts, cake, and mocktails."
+    />
+    <meta name="theme-color" content="#1E1A17" />
+    <title>CoffeeLux — Premium Cozy Coffee Shop</title>
+    <link
+      rel="icon"
+      href="assets/images/icons/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="preload" href="css/variables.css" as="style" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    ></script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" data-scroll-progress></div>
+    <header class="hero" id="hero" aria-label="CoffeeLux hero">
+      <img class="hero__bg" data-hero-image alt="CoffeeLux coffee atmosphere" />
+      <div class="hero__overlay"></div>
+      <nav class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#hero" aria-label="CoffeeLux home"
+          ><img data-logo alt="CoffeeLux logo" /><span data-cafe-name
+            >CoffeeLux</span
+          ></a
+        >
+        <div class="topbar__links">
+          <a href="#gallery">Gallery</a><a href="#menu">Menu</a
+          ><a href="#footer">Visit</a>
+        </div>
+      </nav>
+      <div class="hero__content">
+        <p class="eyebrow">Premium Coffee House</p>
+        <h1 data-cafe-name>CoffeeLux</h1>
+        <p class="hero__tagline" data-tagline></p>
+        <div class="hero__actions">
+          <a class="btn btn--primary ripple" href="#menu">Explore Menu</a
+          ><a class="btn btn--ghost ripple" href="#gallery">View Gallery</a>
+        </div>
+        <div class="contact-icons" aria-label="Contact links">
+          <a data-phone-link aria-label="Call CoffeeLux">☎</a
+          ><a data-instagram-link aria-label="Open Instagram">◎</a
+          ><a data-map-link aria-label="Open location">⌖</a>
+        </div>
+      </div>
+      <a class="scroll-indicator" href="#gallery" aria-label="Scroll to gallery"
+        ><span></span
+      ></a>
+    </header>
+    <main id="main">
+      <section
+        class="section gallery"
+        id="gallery"
+        aria-label="CoffeeLux gallery"
+      >
+        <div class="gallery__ambient" data-gallery-ambient></div>
+        <div class="gallery__grid" data-gallery-grid></div>
+        <div class="gallery__story">
+          <p class="eyebrow">Golden Hour Coffee</p>
+          <p>
+            Settle into <mark>warm wood</mark>, soft conversations, and the
+            scent of <mark>fresh espresso</mark>. Every corner of CoffeeLux is
+            designed to feel calm, familiar, and quietly memorable.
+          </p>
+        </div>
+      </section>
+      <section class="section menu" id="menu" aria-labelledby="menu-title">
+        <div class="section__head">
+          <p class="eyebrow">Freshly Crafted</p>
+          <h2 id="menu-title">Menu</h2>
+          <p>
+            Seasonal favorites, specialty coffee, and comfort plates prepared
+            with care.
+          </p>
+        </div>
+        <nav
+          class="category-nav"
+          data-category-nav
+          aria-label="Menu categories"
+        ></nav>
+        <div class="menu__content" data-menu-content></div>
+      </section>
+    </main>
+    <button class="cart-float ripple" data-cart-button aria-label="Open cart">
+      <span>🛒</span><strong data-cart-count>0</strong>
+    </button>
+    <aside
+      class="cart-drawer"
+      data-cart-drawer
+      aria-hidden="true"
+      aria-labelledby="cart-title"
+    >
+      <div class="cart-drawer__panel" role="dialog" aria-modal="true">
+        <button
+          class="cart-drawer__close"
+          data-cart-close
+          aria-label="Close cart"
+        >
+          ×
+        </button>
+        <h2 id="cart-title">Your Order</h2>
+        <div class="cart-items" data-cart-items></div>
+        <div class="cart-summary">
+          <span>Subtotal</span><strong data-cart-subtotal>$0.00</strong>
+        </div>
+        <button class="btn btn--primary ripple cart-checkout">
+          Front-end Preview Order
+        </button>
+      </div>
+    </aside>
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <div class="lightbox" data-lightbox aria-hidden="true">
+      <button data-lightbox-close aria-label="Close image preview">×</button
+      ><img data-lightbox-img alt="CoffeeLux gallery preview" />
+    </div>
+    <footer class="footer" id="footer">
+      <div>
+        <a class="brand" href="#hero"
+          ><img data-logo alt="CoffeeLux logo" /><span data-cafe-name
+            >CoffeeLux</span
+          ></a
+        >
+        <p data-tagline></p>
+      </div>
+      <address><strong>Address</strong><span data-address></span></address>
+      <div>
+        <strong>Working Hours</strong>
+        <ul data-hours></ul>
+      </div>
+      <div>
+        <strong>Contact</strong><a data-phone-link></a
+        ><a data-instagram-link></a><a data-map-link>Open location</a>
+      </div>
+      <p class="copyright">
+        © <span data-year></span> CoffeeLux. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
