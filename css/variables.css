@@ -1,0 +1,127 @@
+:root {
+  --bg: #1e1a17;
+  --card: #2b2622;
+  --primary: #b88746;
+  --text: #f5efe6;
+  --secondary: #c8b8a6;
+  --muted: #8f8174;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --radius: 24px;
+  --radius-sm: 16px;
+  --max: 1180px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font:
+    Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+::selection {
+  background: var(--primary);
+  color: var(--bg);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #15120f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), #7b552f);
+  border-radius: 99px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+}
+button,
+input {
+  font: inherit;
+}
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -4rem;
+  z-index: 1000;
+  background: var(--primary);
+  color: #17120f;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+.scroll-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  height: 3px;
+  width: 0;
+  background: var(--primary);
+  z-index: 1001;
+}
+.eyebrow {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.3s var(--ease),
+    box-shadow 0.3s var(--ease),
+    background 0.3s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn--primary {
+  background: var(--primary);
+  color: #1b1510;
+  box-shadow: 0 14px 34px rgba(184, 135, 70, 0.28);
+}
+.btn--ghost {
+  border-color: rgba(245, 239, 230, 0.24);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+.ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  transform: scale(0);
+  animation: ripple 0.65s linear;
+  pointer-events: none;
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
